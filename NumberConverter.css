@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background-color: #155096;
+  margin: 30px;
+  text-align: center;
+}
+h1 {
+	color: white;
+  font: 2.4rem 'Press Start 2P', sans-serif;
+  margin: 3%;
+}
+#numberInput {
+	appearance: none;
+  border: solid 5px #c9c9c9;
+  border-radius: none;
+  box-shadow: none;
+  display: block;
+  font: 1.4rem 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+  transition: border 0.3s;
+  width: 30%;
+}
+#numberInput:focus {
+  border: solid 5px #969696;
+  outline: none;
+}
+#stringOutput {
+	background-color: white;
+	border-radius: 5px;
+	color: black;
+  font: 1.3rem 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  margin: 0 auto; 
+  margin-top: 2%;
+  min-height: 25%;
+  padding: 1%;
+  width: 60%;
+}
