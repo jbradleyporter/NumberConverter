@@ -13,7 +13,7 @@ dollars"_
 ## How to run
 
 * Save the project to your computer
-* Open **NumberConverter.html**
+* Open **NumberConverter.html** with an up-to-date browser
 * Type an amount into the input box to see the result in real-time
 
 ## How to test
