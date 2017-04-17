@@ -9,8 +9,8 @@ const NumberConverterTest = function() {
   };
 
   const runTests = () => {
-    testConvert(0, 'zero');
-    testConvert(0000, 'zero');
+    testConvert(0, 'zero and 00/100 dollar');
+    testConvert(0000, 'zero and 00/100 dollar');
     testConvert(0.01, 'zero and 01/100 dollar');
     testConvert(0.59, 'zero and 59/100 dollar');
     testConvert(1, 'one and 00/100 dollar');
