@@ -11,6 +11,8 @@ const NumberConverterTest = function() {
   const runTests = () => {
     testConvert(0, 'zero');
     testConvert(0000, 'zero');
+    testConvert(0.01, 'zero and 01/100 dollar');
+    testConvert(0.59, 'zero and 59/100 dollar');
     testConvert(1, 'one and 00/100 dollar');
     testConvert(2.0, 'two and 00/100 dollars');
     testConvert(3.00, 'three and 00/100 dollars');
@@ -46,6 +48,7 @@ const NumberConverterTest = function() {
     testConvert(502968473, 'five hundred two million nine hundred sixty-eight thousand four hundred seventy-three and 00/100 dollars');
     testConvert(9502968473, 'nine billion five hundred two million nine hundred sixty-eight thousand four hundred seventy-three and 00/100 dollars');
     testConvert('95029684739502968473.03', 'ninety-five quintillion twenty-nine quadrillion six hundred eighty-four trillion seven hundred thirty-nine billion five hundred two million nine hundred sixty-eight thousand four hundred seventy-three and 03/100 dollars');
+    testConvert('0.639', 'zero and 63/100 dollar');
   };
 
   return {

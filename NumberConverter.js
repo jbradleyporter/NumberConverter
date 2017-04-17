@@ -75,15 +75,11 @@ const NumberConverter = function() {
     const splitAmountArray = amountString.split('.');
     const amountIntegerString = splitAmountArray[0];
     const amountDecimalString = splitAmountArray[1] || '00';
-    
-    if (parseInt(amountIntegerString, 10) === 0) {
-      return 'zero';
-    } else {
-      let result = convertIntegerStringToWords(amountIntegerString);
-      result += NumberUtils.getFormattedDecimalString(amountDecimalString);
-      result += NumberUtils.getCurrencyString(amountIntegerString);
-      return NumberUtils.removeWhiteSpace(result);
-    }    
+
+    let result = parseInt(amountIntegerString, 10) !== 0 ? convertIntegerStringToWords(amountIntegerString) : 'zero';
+    result += NumberUtils.getFormattedDecimalString(amountDecimalString);
+    result += NumberUtils.getCurrencyString(amountIntegerString);
+    return NumberUtils.removeWhiteSpace(result);
   }
 
   const convertAndDisplay = event => {

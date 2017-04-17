@@ -11,7 +11,7 @@ const NumberUtils = function() {
     checkBounds: number => !isNaN(number) && !isString(number) && (number > Number.MAX_SAFE_INTEGER),
     convertToString: number => isString(number) ? number.toString() : number.toFixed(2),
     getCurrencyString: amountIntegerString => amountIntegerString > 1 ? 'dollars' : 'dollar',
-    getFormattedDecimalString: decimalString => ` and ${decimalString}/100 `,
+    getFormattedDecimalString: decimalString => ` and ${decimalString.slice(0, 2)}/100 `,
     getScale: scaleIndex => NUMBER_SCALES[scaleIndex] !== undefined ? NUMBER_SCALES[scaleIndex] : 'bajillion',
     getWord: number => NUMBER_TO_WORD[number],
     isValid: number => isNaN(number) || number < 0,   
