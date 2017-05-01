@@ -1,11 +1,7 @@
 const NumberConverterTest = function() {
   const testConvert = (num, result) => {
     const actual = NumberConverter.convertNumberToString(num);
-    const passed = actual === result;
-    if (!passed) {
-      console.error(`'${num}' ended up as '${actual}' instead of '${result}'`);
-    }
-    return passed;
+    console.assert(actual === result, `'${num}' ended up as '${actual}' instead of '${result}'`)
   };
 
   const runTests = () => {
@@ -22,7 +18,7 @@ const NumberConverterTest = function() {
     testConvert(13.20, 'thirteen and 20/100 dollars');
     testConvert(21.21, 'twenty-one and 21/100 dollars');
     testConvert(43.56, 'forty-three and 56/100 dollars');
-    testConvert(43.566, 'forty-three and 57/100 dollars');
+    testConvert(43.4566, 'forty-three and 57/100 dollars');
     testConvert(90, 'ninety and 00/100 dollars');
     testConvert(100, 'one hundred and 00/100 dollars');
     testConvert(101, 'one hundred one and 00/100 dollars');
@@ -31,7 +27,7 @@ const NumberConverterTest = function() {
     testConvert(402, 'four hundred two and 00/100 dollars');
     testConvert(643.11, 'six hundred forty-three and 11/100 dollars');
     testConvert(1473, 'one thousand four hundred seventy-three and 00/100 dollars');
-    testConvert(2523.04, 'two thousand five hundred twenty-three and 04/100 dollars');
+    testConvert(25243.04, 'two thousand five hundred twenty-three and 04/100 dollars');
     testConvert(7000.07, 'seven thousand and 07/100 dollars');
     testConvert(12473, 'twelve thousand four hundred seventy-three and 00/100 dollars');
     testConvert(68403, 'sixty-eight thousand four hundred three and 00/100 dollars');
